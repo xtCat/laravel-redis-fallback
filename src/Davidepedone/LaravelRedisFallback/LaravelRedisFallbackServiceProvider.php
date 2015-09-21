@@ -16,24 +16,25 @@ class LaravelRedisFallbackServiceProvider extends CacheServiceProvider {
 	 *
 	 * @return void
 	 */
-	public function boot(){
-		$this->package('davidepedone/laravel-redis-fallback');
+	public function boot()
+	{
 		$this->app->booting(function() {
 		  $loader = \Illuminate\Foundation\AliasLoader::getInstance();
 		  $loader->alias('LaravelRedisFallback', 'Davidepedone\LaravelRedisFallback\LaravelRedisFallbackFacade');
 		});
 	}
 
-	public function register(){
-		$this->app->bindShared('cache', function($app){
+	public function register()
+	{
+		$this->app->singleton('cache', function($app){
 			return new \Davidepedone\LaravelRedisFallback\LaravelRedisFallback($app);
 		});
 
-		$this->app->bindShared('cache.store', function($app){
+		$this->app->singleton('cache.store', function($app){
 			return $app['cache']->driver();
 		});
 
-		$this->app->bindShared('memcached.connector', function(){
+		$this->app->singleton('memcached.connector', function(){
 			return new MemcachedConnector;
 		});
 
