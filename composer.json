@@ -1,7 +1,7 @@
 {
     "name": "davidepedone/laravel-redis-fallback",
-    "description": "Laravel 4 redis cache fallback to file",
-    "keywords": ["laravel", "laravel4", "cache", "redis", "file"],
+    "description": "Laravel 5 redis cache fallback to file",
+    "keywords": ["laravel", "laravel5", "cache", "redis", "file"],
     "license": "MIT",
     "authors": [
         {
@@ -10,8 +10,8 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "4.2.*"
+        "php": ">=5.5.0",
+        "illuminate/support": "5.*"
     },
     "autoload": {
         "psr-0": {
