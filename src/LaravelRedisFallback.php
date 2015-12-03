@@ -1,6 +1,6 @@
 <?php
 
-namespace xtCat\LaravelRedisFallback;
+namespace xtcat\LaravelRedisFallback;
 
 use Exception;
 use Illuminate\Cache\CacheManager;
@@ -9,7 +9,7 @@ use Illuminate\Cache\RedisStore;
 /**
  * Redis fallback
  *
- * @package xtCat
+ * @package xtcat
  * @subpackage LaravelRedisFallback
  *
  * @author Davide Pedone <davide.pedone@gmail.com>

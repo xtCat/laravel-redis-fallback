@@ -8,7 +8,7 @@ As soon as Redis come back it will be used again.
 Install LaravelRedisFallback as a Composer package, adding this line to your composer.json:
 
 ```php
-"xtCat/laravel-redis-fallback": "dev-master"
+"xtcat/laravel-redis-fallback": "dev-master"
 ```
 and update your vendor folder running the ```composer update ``` command.
 
@@ -19,7 +19,7 @@ Replace the default cache service provider:
 	...
 	//'Illuminate\Cache\CacheServiceProvider',
 	...
-	'xtCat\LaravelRedisFallback\LaravelRedisFallbackServiceProvider'
+	'xtcat\LaravelRedisFallback\LaravelRedisFallbackServiceProvider'
 	...
 )
 ```

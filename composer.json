@@ -1,5 +1,5 @@
 {
-    "name": "xtCat/laravel-redis-fallback",
+    "name": "xtcat/laravel-redis-fallback",
     "description": "Laravel 5 redis cache fallback to file",
     "keywords": ["laravel", "laravel5", "cache", "redis", "file"],
     "license": "MIT",
