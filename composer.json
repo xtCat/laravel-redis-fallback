@@ -8,7 +8,7 @@
             "name": "Davide Pedone",
             "email": "davide.pedone@gmail.com"
         },
-         {
+        {
             "name": "Peter Otto",
             "email": "peterotto87@gmail.com"
         }
@@ -16,6 +16,11 @@
     "require": {
         "php": ">=5.5.0",
         "illuminate/support": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xtcat\\LaravelRedisFallback\\": "src"
+        }
     },
     "minimum-stability": "stable"
 }

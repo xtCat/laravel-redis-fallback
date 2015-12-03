@@ -1,13 +1,13 @@
 <?php
 
-namespace xtcat\LaravelRedisFallback;
+namespace Xtcat\LaravelRedisFallback;
 
 use Illuminate\Cache\CacheServiceProvider;
 
 /**
  * Redis fallback service provider
  *
- * @package xtcat
+ * @package Xtcat
  * @subpackage LaravelRedisFallback
  *
  * @author Davide Pedone <davide.pedone@gmail.com>

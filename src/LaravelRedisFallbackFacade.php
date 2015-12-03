@@ -1,13 +1,13 @@
 <?php
 
-namespace xtcat\LaravelRedisFallback;
+namespace Xtcat\LaravelRedisFallback;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * Redis fallback facade
  *
- * @package xtcat
+ * @package Xtcat
  * @subpackage LaravelRedisFallback
  *
  * @author Davide Pedone <davide.pedone@gmail.com>
