@@ -1,5 +1,5 @@
 {
-    "name": "davidepedone/laravel-redis-fallback",
+    "name": "xtCat/laravel-redis-fallback",
     "description": "Laravel 5 redis cache fallback to file",
     "keywords": ["laravel", "laravel5", "cache", "redis", "file"],
     "license": "MIT",
@@ -7,16 +7,15 @@
         {
             "name": "Davide Pedone",
             "email": "davide.pedone@gmail.com"
+        },
+         {
+            "name": "Peter Otto",
+            "email": "peterotto87@gmail.com"
         }
     ],
     "require": {
         "php": ">=5.5.0",
         "illuminate/support": "5.*"
-    },
-    "autoload": {
-        "psr-0": {
-            "Davidepedone\\LaravelRedisFallback\\": "src/"
-        }
     },
     "minimum-stability": "stable"
 }
