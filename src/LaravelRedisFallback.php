@@ -38,6 +38,7 @@ class LaravelRedisFallback extends CacheManager
 
             return $this->repository($store);
         } catch (Exception $e) {
+        
 	    event('redis.unavailable', null);
 	    
             return parent::createFileDriver(\Config::get('cache.stores.file'));

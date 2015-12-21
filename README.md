@@ -24,6 +24,6 @@ Replace the default cache service provider:
 )
 ```
 ##Events
-You can listen to 'redis.unavailable' event in your listener, for example send and email to you when the redis server is down.
+You can listen to 'redis.unavailable' event in your listener, for example send an email to you when the redis server is down.
 
 Enjoy!
