@@ -54,7 +54,5 @@ class LaravelRedisFallbackServiceProvider extends CacheServiceProvider
         $this->app->singleton('memcached.connector', function() {
             return new MemcachedConnector;
         });
-
-        $this->registerCommands();
     }
 }
