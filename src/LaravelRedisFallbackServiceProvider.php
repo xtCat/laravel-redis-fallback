@@ -3,6 +3,7 @@
 namespace Xtcat\LaravelRedisFallback;
 
 use Illuminate\Cache\CacheServiceProvider;
+use Illuminate\Cache\MemcachedConnector;
 
 /**
  * Redis fallback service provider
