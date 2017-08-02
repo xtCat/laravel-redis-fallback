@@ -5,6 +5,7 @@ namespace Xtcat\LaravelRedisFallback;
 use Exception;
 use Illuminate\Cache\CacheManager;
 use Illuminate\Cache\RedisStore;
+use Illuminate\Support\Arr;
 
 /**
  * Redis fallback
@@ -29,7 +30,7 @@ class LaravelRedisFallback extends CacheManager
     {
         $redis = $this->app['redis'];
 
-        $connection = \Illuminate\Support\Arr::get($config, 'connection', 'default') ? : 'default';
+        $connection = Arr::get($config, 'connection', 'default') ?: 'default';
 
         $store = new RedisStore($redis, $this->getPrefix($config), $connection);
 
@@ -38,9 +39,8 @@ class LaravelRedisFallback extends CacheManager
 
             return $this->repository($store);
         } catch (Exception $e) {
-        
-	    event('redis.unavailable', null);
-	    
+            event('redis.unavailable', null);
+
             return parent::createFileDriver(\Config::get('cache.stores.file'));
         }
     }

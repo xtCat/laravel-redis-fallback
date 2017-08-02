@@ -4,7 +4,7 @@ If you use Redis as cache driver on Laravel 5 and for some reason Redis server b
 This package simply checks for the connection and if test fails, cache is switched to file driver.
 As soon as Redis come back it will be used again.
 
-##How to use
+## How to use
 Install LaravelRedisFallback as a Composer package, adding this line to your composer.json:
 
 ```php
@@ -19,11 +19,11 @@ Replace the default cache service provider:
 	...
 	//'Illuminate\Cache\CacheServiceProvider',
 	...
-	'Xtcat\LaravelRedisFallback\LaravelRedisFallbackServiceProvider'
+	\Xtcat\LaravelRedisFallback\LaravelRedisFallbackServiceProvider::class
 	...
 )
 ```
-##Events
+## Events
 You can listen to 'redis.unavailable' event in your listener, for example send an email to you when the redis server is down.
 
 Enjoy!

@@ -4,6 +4,7 @@ namespace Xtcat\LaravelRedisFallback;
 
 use Illuminate\Cache\CacheServiceProvider;
 use Illuminate\Cache\MemcachedConnector;
+use Illuminate\Foundation\AliasLoader;
 
 /**
  * Redis fallback service provider
@@ -31,8 +32,8 @@ class LaravelRedisFallbackServiceProvider extends CacheServiceProvider
      */
     public function boot()
     {
-        $this->app->booting(function() {
-            $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+        $this->app->booting(function () {
+            $loader = AliasLoader::getInstance();
             $loader->alias('LaravelRedisFallback', LaravelRedisFallbackFacade::class);
         });
     }
@@ -44,15 +45,15 @@ class LaravelRedisFallbackServiceProvider extends CacheServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('cache', function($app) {
+        $this->app->singleton('cache', function ($app) {
             return new LaravelRedisFallback($app);
         });
 
-        $this->app->singleton('cache.store', function($app) {
+        $this->app->singleton('cache.store', function ($app) {
             return $app['cache']->driver();
         });
 
-        $this->app->singleton('memcached.connector', function() {
+        $this->app->singleton('memcached.connector', function () {
             return new MemcachedConnector;
         });
     }
