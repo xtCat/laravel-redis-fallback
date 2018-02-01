@@ -5,6 +5,7 @@ namespace Xtcat\LaravelRedisFallback;
 use Illuminate\Cache\CacheServiceProvider;
 use Illuminate\Cache\MemcachedConnector;
 use Illuminate\Foundation\AliasLoader;
+use Illuminate\Cache\Console\ClearCommand;
 
 /**
  * Redis fallback service provider
@@ -56,5 +57,21 @@ class LaravelRedisFallbackServiceProvider extends CacheServiceProvider
         $this->app->singleton('memcached.connector', function () {
             return new MemcachedConnector;
         });
+        
+        $this->registerCommands();
+    }
+    
+    /**
+     * Register the cache related console commands.
+     *
+     * @return void
+     */
+    public function registerCommands()
+    {
+        $this->app->singleton('command.cache.clear', function ($app) {
+            return new ClearCommand($app['cache']);
+        });
+
+        $this->commands('command.cache.clear');
     }
 }
