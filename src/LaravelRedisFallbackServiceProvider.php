@@ -1,6 +1,6 @@
 <?php
 
-namespace Xtcat\LaravelRedisFallback;
+namespace guillermobt\LaravelRedisFallback;
 
 use Illuminate\Cache\CacheServiceProvider;
 use Illuminate\Cache\MemcachedConnector;
