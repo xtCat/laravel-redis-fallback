@@ -58,7 +58,9 @@ class LaravelRedisFallbackServiceProvider extends CacheServiceProvider
             return new MemcachedConnector;
         });
         
-        $this->registerCommands();
+        if (floatval(\App::version()) < 5.4) {
+            $this->registerCommands();
+        }
     }
     
     /**
