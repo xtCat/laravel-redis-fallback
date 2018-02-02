@@ -1,5 +1,5 @@
 {
-    "name": "xtcat/laravel-redis-fallback",
+    "name": "guillermobt/laravel-redis-fallback",
     "description": "Laravel 5 redis cache fallback to file",
     "keywords": ["laravel", "laravel5", "cache", "redis", "file"],
     "license": "MIT",
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Xtcat\\LaravelRedisFallback\\": "src"
+            "guillermobt\\LaravelRedisFallback\\": "src"
         }
     },
     "minimum-stability": "stable"
