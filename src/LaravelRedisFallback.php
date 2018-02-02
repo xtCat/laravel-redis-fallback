@@ -1,6 +1,6 @@
 <?php
 
-namespace Xtcat\LaravelRedisFallback;
+namespace guillermobt\LaravelRedisFallback;
 
 use Exception;
 use Illuminate\Cache\CacheManager;
